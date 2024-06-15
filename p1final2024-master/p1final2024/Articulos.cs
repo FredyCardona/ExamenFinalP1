@@ -21,7 +21,7 @@ namespace p1final2024
 
         private void listarArticulos()
         {
-            dgvArticulo.DataSource = articulodAO.ReadAll();
+            dgvArticulos.DataSource = articulodAO.ReadAll();
             dgvArticulos.Columns["image"].Visible = false;
         }
 
@@ -78,6 +78,9 @@ namespace p1final2024
             return imagenBytes;
         }
 
-        
+        private void dgvArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

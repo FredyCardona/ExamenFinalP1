@@ -18,12 +18,12 @@ namespace p1final2024
 
         public ArticuloDAO()
         {
-            
+
         }
 
         public void Create(Articulo articulo)
         {
-            using (MySqlConnection conn = new MySqlConnection(conectionString))
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
                 string query = "INSERT INTO articulos (nombre, descripcion, precio, imagen) VALUES (@nombre, @descripcion, @precio, @imagen)";
@@ -57,7 +57,7 @@ namespace p1final2024
                                 Nombre = reader.GetString("nombre"),
                                 Descripcion = reader.GetString("descripcion"),
                                 Precio = reader.GetDecimal("precio"),
-                                Imagen = reader["image"] as byte[]
+                                Imagen = reader["imagen"] as byte[]
                             };
                         }
                     }
@@ -99,13 +99,13 @@ namespace p1final2024
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "UPDATE articulo SET nombre = @nombre, descripcion = @descripcion, precio = @precio, imagen = @imagen WHERE id = @id";
+                string query = "UPDATE articulos SET nombre = @nombre, descripcion = @descripcion, precio = @precio, imagen = @imagen WHERE id = @id";
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@nombre", articulo.Nombre);
                     cmd.Parameters.AddWithValue("@descripcion", articulo.Descripcion);
                     cmd.Parameters.AddWithValue("@precio", articulo.Precio);
-                    cmd.Parameters.AddWithValue("@image", articulo.Imagen);
+                    cmd.Parameters.AddWithValue("@imagen", articulo.Imagen);
                     cmd.Parameters.AddWithValue("@id", articulo.Id);
                     cmd.ExecuteNonQuery();
                 }
@@ -117,7 +117,7 @@ namespace p1final2024
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "DELETE  articulos WHERE id = @id";
+                string query = "DELETE FROM articulos WHERE id = @id";
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@id", id);

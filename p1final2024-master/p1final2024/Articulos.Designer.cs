@@ -1,4 +1,6 @@
-﻿namespace p1final2024
+﻿using System;
+
+namespace p1final2024
 {
     partial class Articulos
     {
@@ -48,28 +50,32 @@
             this.dgvArticulos.AllowUserToDeleteRows = false;
             this.dgvArticulos.AllowUserToOrderColumns = true;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArticulos.Location = new System.Drawing.Point(32, 28);
+            this.dgvArticulos.Location = new System.Drawing.Point(36, 35);
+            this.dgvArticulos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.ReadOnly = true;
             this.dgvArticulos.RowHeadersWidth = 51;
             this.dgvArticulos.RowTemplate.Height = 24;
-            this.dgvArticulos.Size = new System.Drawing.Size(623, 439);
+            this.dgvArticulos.Size = new System.Drawing.Size(701, 549);
             this.dgvArticulos.TabIndex = 0;
+            this.dgvArticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticulos_CellContentClick);
             this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
             // pcbImagen
             // 
-            this.pcbImagen.Location = new System.Drawing.Point(890, 228);
+            this.pcbImagen.Location = new System.Drawing.Point(1001, 285);
+            this.pcbImagen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pcbImagen.Name = "pcbImagen";
-            this.pcbImagen.Size = new System.Drawing.Size(212, 188);
+            this.pcbImagen.Size = new System.Drawing.Size(238, 235);
             this.pcbImagen.TabIndex = 2;
             this.pcbImagen.TabStop = false;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(890, 433);
+            this.btnBuscar.Location = new System.Drawing.Point(1001, 541);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(212, 34);
+            this.btnBuscar.Size = new System.Drawing.Size(238, 42);
             this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -78,56 +84,60 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(718, 59);
+            this.label1.Location = new System.Drawing.Point(808, 74);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 16);
+            this.label1.Size = new System.Drawing.Size(65, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "Nombre";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(819, 59);
+            this.txtNombre.Location = new System.Drawing.Point(921, 74);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(283, 22);
+            this.txtNombre.Size = new System.Drawing.Size(318, 26);
             this.txtNombre.TabIndex = 5;
             // 
             // TxtDescripcion
             // 
-            this.TxtDescripcion.Location = new System.Drawing.Point(819, 101);
+            this.TxtDescripcion.Location = new System.Drawing.Point(921, 126);
+            this.TxtDescripcion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TxtDescripcion.Name = "TxtDescripcion";
-            this.TxtDescripcion.Size = new System.Drawing.Size(283, 22);
+            this.TxtDescripcion.Size = new System.Drawing.Size(318, 26);
             this.TxtDescripcion.TabIndex = 7;
             // 
             // Descripcion
             // 
             this.Descripcion.AutoSize = true;
-            this.Descripcion.Location = new System.Drawing.Point(718, 101);
+            this.Descripcion.Location = new System.Drawing.Point(808, 126);
             this.Descripcion.Name = "Descripcion";
-            this.Descripcion.Size = new System.Drawing.Size(79, 16);
+            this.Descripcion.Size = new System.Drawing.Size(92, 20);
             this.Descripcion.TabIndex = 6;
             this.Descripcion.Text = "Descripcion";
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(819, 142);
+            this.txtPrecio.Location = new System.Drawing.Point(921, 178);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(283, 22);
+            this.txtPrecio.Size = new System.Drawing.Size(318, 26);
             this.txtPrecio.TabIndex = 9;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(718, 142);
+            this.label3.Location = new System.Drawing.Point(808, 178);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 16);
+            this.label3.Size = new System.Drawing.Size(53, 20);
             this.label3.TabIndex = 8;
             this.label3.Text = "Precio";
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(721, 188);
+            this.btnGuardar.Location = new System.Drawing.Point(811, 235);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(381, 34);
+            this.btnGuardar.Size = new System.Drawing.Size(429, 42);
             this.btnGuardar.TabIndex = 10;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -135,9 +145,9 @@
             // 
             // Articulos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1156, 501);
+            this.ClientSize = new System.Drawing.Size(1300, 626);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.label3);
@@ -148,6 +158,7 @@
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.pcbImagen);
             this.Controls.Add(this.dgvArticulos);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Articulos";
             this.Text = "Inventory";
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
@@ -155,6 +166,11 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
